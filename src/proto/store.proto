@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package store;
+
+message Store {
+    string id = 1;
+    string name = 2;
+    string merchant_id = 3;
+    string description = 4;
+    bool active = 5;
+}
+
+message StoreRequest {
+    string merchant_id = 1;
+}
+
+message StoreResponse {
+    repeated Store stores = 1;
+}
+
+service StoreService {
+    rpc GetStores(StoreRequest) returns (StoreResponse);
+}
