@@ -41,3 +41,7 @@ You must have protoc installed to generate JavaScript files from the .proto file
 - **npx grpc-tools compile ./src/proto/\*_/_.proto --js_out=import_style=commonjs,binary:./src/proto/generated --grpc_out=grpc_js:./src/proto/generated**
 
 npm run start
+
+# - Note: 
+
+**In AuthClient.ts and StorClient.ts we have used both protobuf serialization methods. Binary Format and JSON Conversion, for now we are using Binary for both, If you want to use JSON method just uncomment the JSON Method code and comment the Binary Method code for both files.**
